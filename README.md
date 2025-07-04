@@ -23,7 +23,7 @@ A Convolutional Neural Network (CNN) based Classification Model for Pneumonia X-
 1.  **数据管道构建**: 使用 PyTorch 的 `ImageFolder` 和 `DataLoader` 构建高效的数据加载管道。对训练集施以 `torchvision.transforms` 中定义的随机裁切、旋转、翻转等数据增强操作，以提升模型泛化能力。所有图像均根据 ImageNet 的均值和标准差进行归一化。
 
 2.  **模型架构**:
-    -   **骨干网络 (Backbone)**: 使用 `torchvision.models` 加载在 ImageNet 上预训练的 `MobileNetV2` 作为特征提取的骨干网络。
+    -   **骨干网络**: 使用 `torchvision.models` 加载在 ImageNet 上预训练的 `MobileNetV2` 作为特征提取的骨干网络。
     -   **迁移学习**: 替换 `MobileNetV2` 原始的1000类输出的全连接层，为一个新的、适用于本项目二分类任务的自定义分类头。其结构为：`GlobalAveragePooling` -> `Dropout(0.5)` -> `Linear(1)`。最终输出一个单独的 logit。
 
 3.  **类别不平衡处理**:

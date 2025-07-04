@@ -45,4 +45,4 @@ A Convolutional Neural Network (CNN) based Classification Model for Pneumonia X-
 
 ![最终评估结果](images/final_results.png)
 
-从分类报告和混淆矩阵中可以看出，模型在**肺炎**类别上实现了高达**96%的召回率**，这意味着模型识别真实病人的能力非常强，漏诊率极低。在医疗辅助诊断场景中非常有价值。
+从分类报告和混淆矩阵中可以看出，模型在**肺炎**类别上实现了高达**96%的召回率**，这意味着模型识别真实病人的能力强，漏诊率低。在医疗辅助诊断场景中非常有价值。
